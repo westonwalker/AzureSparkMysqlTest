@@ -21,7 +21,11 @@
   <ItemGroup>
     <Folder Include="Application\Database\Migrations\" />
 	<Folder Include="Storage\Logging\" />
+	<Folder Include="Storage\Mail\" />
   </ItemGroup>
+	<ItemGroup>
+		<None Include="wwwroot/**" CopyToPublishDirectory="PreserveNewest" />
+	</ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build;PublishBuildAssets" Condition=" !Exists('node_modules') ">
     <!-- Ensure Node.js is installed -->
