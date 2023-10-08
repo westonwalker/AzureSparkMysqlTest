@@ -72,8 +72,8 @@ public class Register : PageModel
         var newUser = await _usersService.CreateUserAsync(userForm);
 
         // Broadcast user created event. Sends welcome email
-        var userCreated = new UserCreated(newUser);
-        await _dispatcher.Broadcast(userCreated);
+        //var userCreated = new UserCreated(newUser);
+        //await _dispatcher.Broadcast(userCreated);
 
         var user = await _usersService.FindUserAsync(newUser.Email, newUser.Password);
 
